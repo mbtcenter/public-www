@@ -1,0 +1,31 @@
+.bannerText h1 span,
+.bannerText .mbnt:hover,
+.da-slide h2 span,
+.da-slide .da-link:hover,
+.blog p a {
+	color:#f08912;
+}
+.da-slide .da-link:hover,
+.bannerText .mbnt:hover,
+.expertiesico span.ico{
+	border-color:#f08912;
+}
+.expertiesico span.ico {
+	background-color:#f08912;
+}
+.isStuck,
+.aboutus .btn-primary:hover,
+.skillset,
+.experdate,
+.contact,
+.conForm .submitBnt,
+.experdate,
+.teammember,
+.worklogo li:hover .memberdesc,
+ol.flex-control-paging li a.flex-active,
+.socialshare a{
+	background:#f08912;
+}
+.heading h2 {
+	border-bottom-color:#f08912;
+}
