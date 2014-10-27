@@ -1,0 +1,1884 @@
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:33:14] Postback payload: Array
+(
+    [code] => phpVersion
+    [handler] => onCheckRequirement
+)
+
+[2014/10/27 06:33:14] System check: phpVersion
+[2014/10/27 06:33:14] Requirement phpVersion +OK
+[2014/10/27 06:33:14] Execute handler (onCheckRequirement): Array
+(
+    [result] => 1
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:33:15] Postback payload: Array
+(
+    [code] => safeMode
+    [handler] => onCheckRequirement
+)
+
+[2014/10/27 06:33:15] System check: safeMode
+[2014/10/27 06:33:15] Requirement safeMode +OK
+[2014/10/27 06:33:15] Execute handler (onCheckRequirement): Array
+(
+    [result] => 1
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:33:15] Postback payload: Array
+(
+    [code] => curlLibrary
+    [handler] => onCheckRequirement
+)
+
+[2014/10/27 06:33:15] System check: curlLibrary
+[2014/10/27 06:33:15] Requirement curlLibrary +OK
+[2014/10/27 06:33:15] Execute handler (onCheckRequirement): Array
+(
+    [result] => 1
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:33:16] Postback payload: Array
+(
+    [code] => liveConnection
+    [handler] => onCheckRequirement
+)
+
+[2014/10/27 06:33:16] System check: liveConnection
+[2014/10/27 06:33:16] Server request: ping
+[2014/10/27 06:33:16] Request information: Array
+(
+    [url] => http://octobercms.com/api/ping
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 832
+    [request_size] => 163
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.371043
+    [namelookup_time] => 0.004304
+    [connect_time] => 0.165314
+    [pretransfer_time] => 0.165358
+    [size_upload] => 32
+    [size_download] => 14
+    [speed_download] => 37
+    [speed_upload] => 86
+    [download_content_length] => -1
+    [upload_content_length] => 32
+    [starttransfer_time] => 0.367954
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40842
+)
+
+[2014/10/27 06:33:16] Requirement liveConnection +OK
+[2014/10/27 06:33:16] Execute handler (onCheckRequirement): Array
+(
+    [result] => 1
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:33:18] Postback payload: Array
+(
+    [code] => writePermission
+    [handler] => onCheckRequirement
+)
+
+[2014/10/27 06:33:18] System check: writePermission
+[2014/10/27 06:33:18] Requirement writePermission +OK
+[2014/10/27 06:33:18] Execute handler (onCheckRequirement): Array
+(
+    [result] => 1
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:33:19] Postback payload: Array
+(
+    [code] => pdoLibrary
+    [handler] => onCheckRequirement
+)
+
+[2014/10/27 06:33:19] System check: pdoLibrary
+[2014/10/27 06:33:19] Requirement pdoLibrary +OK
+[2014/10/27 06:33:19] Execute handler (onCheckRequirement): Array
+(
+    [result] => 1
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:33:19] Postback payload: Array
+(
+    [code] => mcryptLibrary
+    [handler] => onCheckRequirement
+)
+
+[2014/10/27 06:33:19] System check: mcryptLibrary
+[2014/10/27 06:33:19] Requirement mcryptLibrary +OK
+[2014/10/27 06:33:19] Execute handler (onCheckRequirement): Array
+(
+    [result] => 1
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:33:20] Postback payload: Array
+(
+    [code] => zipLibrary
+    [handler] => onCheckRequirement
+)
+
+[2014/10/27 06:33:20] System check: zipLibrary
+[2014/10/27 06:33:20] Requirement zipLibrary +OK
+[2014/10/27 06:33:20] Execute handler (onCheckRequirement): Array
+(
+    [result] => 1
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:33:21] Postback payload: Array
+(
+    [code] => gdLibrary
+    [handler] => onCheckRequirement
+)
+
+[2014/10/27 06:33:21] System check: gdLibrary
+[2014/10/27 06:33:21] Requirement gdLibrary +OK
+[2014/10/27 06:33:21] Execute handler (onCheckRequirement): Array
+(
+    [result] => 1
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:34:13] Postback payload: Array
+(
+    [db_type] => mysql
+    [db_host] => localhost
+    [db_port] => 
+    [db_name] => bc_coworking_cms
+    [db_user] => root
+    [db_pass] => *******
+    [admin_first_name] => Admin
+    [admin_last_name] => Person
+    [admin_email] => *******@*****.com
+    [admin_login] => admin
+    [admin_password] => *******
+    [admin_confirm_password] => *******
+    [backend_uri] => /backend
+    [encryption_code] => *******
+    [file_mask] => 777
+    [folder_mask] => 777
+    [handler] => onValidateDatabase
+)
+
+[2014/10/27 06:34:13] Handler error (onValidateDatabase): Database "bc_coworking_cms" is not empty. Please empty the database or specify another database.
+[2014/10/27 06:34:13] Trace log:
+#0 /var/www/coworking.biz/install_files/php/Installer.php(53): Installer->onValidateDatabase()
+#1 /var/www/coworking.biz/install_files/php/boot.php(55): Installer->__construct()
+#2 /var/www/coworking.biz/install.php(1): include('/var/www/cowork...')
+#3 {main}
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:39:15] Postback payload: Array
+(
+    [db_type] => mysql
+    [db_host] => localhost
+    [db_port] => 
+    [db_name] => bc_coworking_cms
+    [db_user] => root
+    [db_pass] => *******
+    [admin_first_name] => Admin
+    [admin_last_name] => Person
+    [admin_email] => *******@*****.com
+    [admin_login] => admin
+    [admin_password] => *******
+    [admin_confirm_password] => *******
+    [backend_uri] => /backend
+    [encryption_code] => *******
+    [file_mask] => 777
+    [folder_mask] => 777
+    [handler] => onValidateDatabase
+)
+
+[2014/10/27 06:39:15] Handler error (onValidateDatabase): Connection failed: SQLSTATE[42000] [1049] Unknown database 'bc_coworking_cms'
+[2014/10/27 06:39:15] Trace log:
+#0 /var/www/coworking.biz/install_files/php/Installer.php(53): Installer->onValidateDatabase()
+#1 /var/www/coworking.biz/install_files/php/boot.php(55): Installer->__construct()
+#2 /var/www/coworking.biz/install.php(1): include('/var/www/cowork...')
+#3 {main}
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:39:47] Postback payload: Array
+(
+    [db_type] => mysql
+    [db_host] => localhost
+    [db_port] => 
+    [db_name] => bc_coworking_cms
+    [db_user] => root
+    [db_pass] => *******
+    [admin_first_name] => Admin
+    [admin_last_name] => Person
+    [admin_email] => *******@*****.com
+    [admin_login] => admin
+    [admin_password] => *******
+    [admin_confirm_password] => *******
+    [backend_uri] => /backend
+    [encryption_code] => *******
+    [file_mask] => 777
+    [folder_mask] => 777
+    [handler] => onValidateDatabase
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:39:47] Postback payload: Array
+(
+    [db_type] => mysql
+    [db_host] => localhost
+    [db_port] => 
+    [db_name] => bc_coworking_cms
+    [db_user] => root
+    [db_pass] => *******
+    [admin_first_name] => Admin
+    [admin_last_name] => Person
+    [admin_email] => *******@*****.com
+    [admin_login] => admin
+    [admin_password] => *******
+    [admin_confirm_password] => *******
+    [backend_uri] => /backend
+    [encryption_code] => *******
+    [file_mask] => 777
+    [folder_mask] => 777
+    [handler] => onValidateAdminAccount
+)
+
+[2014/10/27 06:39:47] Handler error (onValidateAdminAccount): Please specify password
+[2014/10/27 06:39:47] Trace log:
+#0 /var/www/coworking.biz/install_files/php/Installer.php(53): Installer->onValidateAdminAccount()
+#1 /var/www/coworking.biz/install_files/php/boot.php(55): Installer->__construct()
+#2 /var/www/coworking.biz/install.php(1): include('/var/www/cowork...')
+#3 {main}
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:40:48] Postback payload: Array
+(
+    [db_type] => mysql
+    [db_host] => localhost
+    [db_port] => 
+    [db_name] => bc_coworking_cms
+    [db_user] => root
+    [db_pass] => *******
+    [admin_first_name] => Julian
+    [admin_last_name] => Smith
+    [admin_email] => *******@*****.com
+    [admin_login] => admin
+    [admin_password] => *******
+    [admin_confirm_password] => *******
+    [backend_uri] => /backend
+    [encryption_code] => *******
+    [file_mask] => 777
+    [folder_mask] => 777
+    [handler] => onValidateDatabase
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:40:48] Postback payload: Array
+(
+    [db_type] => mysql
+    [db_host] => localhost
+    [db_port] => 
+    [db_name] => bc_coworking_cms
+    [db_user] => root
+    [db_pass] => *******
+    [admin_first_name] => Julian
+    [admin_last_name] => Smith
+    [admin_email] => *******@*****.com
+    [admin_login] => admin
+    [admin_password] => *******
+    [admin_confirm_password] => *******
+    [backend_uri] => /backend
+    [encryption_code] => *******
+    [file_mask] => 777
+    [folder_mask] => 777
+    [handler] => onValidateAdminAccount
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:40:48] Postback payload: Array
+(
+    [db_type] => mysql
+    [db_host] => localhost
+    [db_port] => 
+    [db_name] => bc_coworking_cms
+    [db_user] => root
+    [db_pass] => *******
+    [admin_first_name] => Julian
+    [admin_last_name] => Smith
+    [admin_email] => *******@*****.com
+    [admin_login] => admin
+    [admin_password] => *******
+    [admin_confirm_password] => *******
+    [backend_uri] => /backend
+    [encryption_code] => *******
+    [file_mask] => 777
+    [folder_mask] => 777
+    [handler] => onValidateAdvancedConfig
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:40:49] Postback payload: Array
+(
+    [handler] => onGetPopularPlugins
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:40:49] Postback payload: Array
+(
+    [handler] => onGetPopularThemes
+)
+
+[2014/10/27 06:40:49] Server request: plugin/popular
+[2014/10/27 06:40:49] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/popular
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 832
+    [request_size] => 173
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.357427
+    [namelookup_time] => 0.00429
+    [connect_time] => 0.16546
+    [pretransfer_time] => 0.165504
+    [size_upload] => 32
+    [size_download] => 1258
+    [speed_download] => 3519
+    [speed_upload] => 89
+    [download_content_length] => -1
+    [upload_content_length] => 32
+    [starttransfer_time] => 0.355307
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40843
+)
+
+[2014/10/27 06:40:49] Execute handler (onGetPopularPlugins): Array
+(
+    [0] => Array
+        (
+            [name] => Twitter
+            [description] => This plugin adds a Twitter features to your page.
+            [code] => RainLab.Twitter
+            [updated_at] => 2014-07-14 01:07:53
+            [image] => http://octobercms.com/uploads/public/537/288/83c/thumb_26_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [1] => Array
+        (
+            [name] => Google Analytics
+            [description] => Provides the Google Analytics tracking and reporting.
+            [code] => RainLab.GoogleAnalytics
+            [updated_at] => 2014-05-12 01:56:00
+            [image] => http://octobercms.com/uploads/public/540/8f0/603/thumb_727_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [2] => Array
+        (
+            [name] => MailChimp
+            [description] => Provides MailChimp integration services.
+            [code] => RainLab.MailChimp
+            [updated_at] => 2014-05-12 01:53:25
+            [image] => http://octobercms.com/uploads/public/537/210/7f3/thumb_22_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [3] => Array
+        (
+            [name] => Blog
+            [description] => A robust blogging platform.
+            [code] => RainLab.Blog
+            [updated_at] => 2014-05-02 01:17:59
+            [image] => http://octobercms.com/uploads/public/540/8f5/50e/thumb_729_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [4] => Array
+        (
+            [name] => User
+            [description] => Front-end user management.
+            [code] => RainLab.User
+            [updated_at] => 2014-05-02 00:49:16
+            [image] => http://octobercms.com/uploads/public/540/8f2/a51/thumb_728_64x64_0_0_auto.png
+            [author] => October
+        )
+
+)
+
+[2014/10/27 06:40:49] Server request: theme/popular
+[2014/10/27 06:40:49] Request information: Array
+(
+    [url] => http://octobercms.com/api/theme/popular
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 834
+    [request_size] => 172
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.349743
+    [namelookup_time] => 0.004263
+    [connect_time] => 0.165234
+    [pretransfer_time] => 0.16527
+    [size_upload] => 32
+    [size_download] => 295
+    [speed_download] => 843
+    [speed_upload] => 91
+    [download_content_length] => -1
+    [upload_content_length] => 32
+    [starttransfer_time] => 0.347745
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40844
+)
+
+[2014/10/27 06:40:49] Execute handler (onGetPopularThemes): Array
+(
+    [0] => Array
+        (
+            [name] => Flat UI
+            [description] => A theme that uses a Flat user-interface and has no dependencies on others plugins.
+            [code] => Responsiv.Flat
+            [updated_at] => 2014-07-23 21:32:51
+            [image] => http://octobercms.com/uploads/public/53d/084/fbc/thumb_543_210x140_0_0_crop.jpg
+            [author] => October
+        )
+
+)
+
+[2014/10/27 06:40:58] Server request: plugin/search
+[2014/10/27 06:40:58] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 830
+    [request_size] => 180
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.377558
+    [namelookup_time] => 0.004317
+    [connect_time] => 0.165229
+    [pretransfer_time] => 0.165274
+    [size_upload] => 40
+    [size_download] => 2
+    [speed_download] => 5
+    [speed_upload] => 105
+    [download_content_length] => -1
+    [upload_content_length] => 40
+    [starttransfer_time] => 0.37537
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40845
+)
+
+[2014/10/27 06:40:58] Execute handler (onSearchPlugins): Array
+(
+)
+
+[2014/10/27 06:40:59] Server request: plugin/search
+[2014/10/27 06:40:59] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 832
+    [request_size] => 180
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.358073
+    [namelookup_time] => 1.6E-5
+    [connect_time] => 0.161231
+    [pretransfer_time] => 0.161265
+    [size_upload] => 40
+    [size_download] => 2
+    [speed_download] => 5
+    [speed_upload] => 111
+    [download_content_length] => -1
+    [upload_content_length] => 40
+    [starttransfer_time] => 0.356987
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40846
+)
+
+[2014/10/27 06:40:59] Execute handler (onSearchPlugins): Array
+(
+)
+
+[2014/10/27 06:40:59] Server request: plugin/search
+[2014/10/27 06:40:59] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 832
+    [request_size] => 182
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.36161
+    [namelookup_time] => 1.7E-5
+    [connect_time] => 0.160912
+    [pretransfer_time] => 0.160945
+    [size_upload] => 42
+    [size_download] => 2
+    [speed_download] => 5
+    [speed_upload] => 116
+    [download_content_length] => -1
+    [upload_content_length] => 42
+    [starttransfer_time] => 0.357598
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40847
+)
+
+[2014/10/27 06:40:59] Execute handler (onSearchPlugins): Array
+(
+)
+
+[2014/10/27 06:41:00] Server request: plugin/search
+[2014/10/27 06:41:00] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 838
+    [request_size] => 183
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.368384
+    [namelookup_time] => 0.004211
+    [connect_time] => 0.165197
+    [pretransfer_time] => 0.16523
+    [size_upload] => 43
+    [size_download] => 2
+    [speed_download] => 5
+    [speed_upload] => 116
+    [download_content_length] => -1
+    [upload_content_length] => 43
+    [starttransfer_time] => 0.364974
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40848
+)
+
+[2014/10/27 06:41:00] Execute handler (onSearchPlugins): Array
+(
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:41:00] Postback payload: Array
+(
+    [name] => firm
+    [handler] => onPluginDetails
+)
+
+[2014/10/27 06:41:00] Server request: plugin/detail
+[2014/10/27 06:41:00] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/detail
+    [content_type] => text/html; charset=UTF-8
+    [http_code] => 500
+    [header_size] => 878
+    [request_size] => 182
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.349673
+    [namelookup_time] => 1.5E-5
+    [connect_time] => 0.160972
+    [pretransfer_time] => 0.161003
+    [size_upload] => 42
+    [size_download] => 44
+    [speed_download] => 125
+    [speed_upload] => 120
+    [download_content_length] => -1
+    [upload_content_length] => 42
+    [starttransfer_time] => 0.348151
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40849
+)
+
+[2014/10/27 06:41:00] Handler error (onPluginDetails): Server responded with error: A plugin with name "firm" could not be found
+[2014/10/27 06:41:00] Trace log:
+#0 /var/www/coworking.biz/install_files/php/Installer.php(256): Installer->requestServerData('plugin/detail', Array)
+#1 /var/www/coworking.biz/install_files/php/Installer.php(53): Installer->onPluginDetails()
+#2 /var/www/coworking.biz/install_files/php/boot.php(55): Installer->__construct()
+#3 /var/www/coworking.biz/install.php(1): include('/var/www/cowork...')
+#4 {main}
+[2014/10/27 06:41:03] Server request: plugin/search
+[2014/10/27 06:41:03] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 830
+    [request_size] => 182
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.371952
+    [namelookup_time] => 3.2E-5
+    [connect_time] => 0.161173
+    [pretransfer_time] => 0.161211
+    [size_upload] => 42
+    [size_download] => 3290
+    [speed_download] => 8845
+    [speed_upload] => 112
+    [download_content_length] => -1
+    [upload_content_length] => 42
+    [starttransfer_time] => 0.3692
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40850
+)
+
+[2014/10/27 06:41:03] Execute handler (onSearchPlugins): Array
+(
+    [0] => Array
+        (
+            [name] => Blog
+            [description] => A robust blogging platform.
+            [code] => RainLab.Blog
+            [updated_at] => 2014-05-02 01:17:59
+            [image] => http://octobercms.com/uploads/public/540/8f5/50e/thumb_729_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [1] => Array
+        (
+            [name] => Forum
+            [description] => A simple embeddable forum
+            [code] => RainLab.Forum
+            [updated_at] => 2014-05-12 01:56:26
+            [image] => http://octobercms.com/uploads/public/540/847/330/thumb_724_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [2] => Array
+        (
+            [name] => URL Shortener
+            [description] => A short URL service for OctoberCMS.
+            [code] => Connor.ShortURL
+            [updated_at] => 2014-05-19 12:19:33
+            [image] => http://octobercms.com/uploads/public/537/9da/994/thumb_87_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [3] => Array
+        (
+            [name] => Flexi Contact
+            [description] => A Flexible and Configurable Contact Form to Add to any Page
+            [code] => LaminSanneh.FlexiContact
+            [updated_at] => 2014-05-22 11:21:04
+            [image] => http://octobercms.com/uploads/public/537/dce/e4e/thumb_136_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [4] => Array
+        (
+            [name] => Octo Mail
+            [description] => Create front-end contact forms that allow to send email messages based on custom templates.
+            [code] => OctoDevel.OctoMail
+            [updated_at] => 2014-05-23 10:04:41
+            [image] => http://octobercms.com/uploads/public/537/f16/ae5/thumb_169_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [5] => Array
+        (
+            [name] => Redirection
+            [description] => Provides a GUI interface for adding site redirects
+            [code] => Flynsarmy.Redirection
+            [updated_at] => 2014-05-30 08:46:45
+            [image] => http://octobercms.com/uploads/public/538/7c5/5da/thumb_246_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [6] => Array
+        (
+            [name] => Status Board
+            [description] => Display a status board for members of your team
+            [code] => Mayhak.StatusBoard
+            [updated_at] => 2014-05-28 04:26:11
+            [image] => http://octobercms.com/uploads/public/538/4fd/e70/thumb_224_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [7] => Array
+        (
+            [name] => Blog RSS Feed
+            [description] => An RSS feed generator for the RainLab Blog plugin
+            [code] => SoBoRed.Rss
+            [updated_at] => 2014-06-08 05:50:26
+            [image] => http://octobercms.com/uploads/public/539/3ff/e98/thumb_312_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [8] => Array
+        (
+            [name] => CKeditor
+            [description] => CKEditor is a ready-for-use HTML text editor designed to simplify web content creation. (with a File Manager)
+            [code] => ShahiemSeymor.Ckeditor
+            [updated_at] => 2014-09-06 16:48:26
+            [image] => http://octobercms.com/uploads/public/53f/8b5/faa/thumb_691_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [9] => Array
+        (
+            [name] => RoomBooking
+            [description] => Booking plugin, with front Room list, Room details and Booking form, and backend for Rooms and Bookings
+            [code] => Tiipiik.Booking
+            [updated_at] => 2014-07-07 22:44:15
+            [image] => http://octobercms.com/uploads/public/53b/27d/26f/thumb_424_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [10] => Array
+        (
+            [name] => Octo Slider
+            [description] => Create slideshows for your website using jquery slider plugins.
+            [code] => OctoDevel.OctoSlider
+            [updated_at] => 2014-07-10 21:46:50
+            [image] => http://octobercms.com/uploads/public/53b/eba/c74/thumb_512_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [11] => Array
+        (
+            [name] => Multisite
+            [description] => Multisite support plugin for October
+            [code] => Voipdeploy.Multisite
+            [updated_at] => 2014-10-08 23:41:10
+            [image] => http://octobercms.com/uploads/public/543/47f/20f/thumb_835_64x64_0_0_auto.png
+            [author] => October
+        )
+
+)
+
+[2014/10/27 06:41:03] Server request: plugin/search
+[2014/10/27 06:41:03] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 832
+    [request_size] => 183
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.381094
+    [namelookup_time] => 0.00422
+    [connect_time] => 0.165122
+    [pretransfer_time] => 0.165155
+    [size_upload] => 43
+    [size_download] => 1143
+    [speed_download] => 2999
+    [speed_upload] => 112
+    [download_content_length] => -1
+    [upload_content_length] => 43
+    [starttransfer_time] => 0.37769
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40851
+)
+
+[2014/10/27 06:41:03] Execute handler (onSearchPlugins): Array
+(
+    [0] => Array
+        (
+            [name] => Blog
+            [description] => A robust blogging platform.
+            [code] => RainLab.Blog
+            [updated_at] => 2014-05-02 01:17:59
+            [image] => http://octobercms.com/uploads/public/540/8f5/50e/thumb_729_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [1] => Array
+        (
+            [name] => Flexi Contact
+            [description] => A Flexible and Configurable Contact Form to Add to any Page
+            [code] => LaminSanneh.FlexiContact
+            [updated_at] => 2014-05-22 11:21:04
+            [image] => http://octobercms.com/uploads/public/537/dce/e4e/thumb_136_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [2] => Array
+        (
+            [name] => Octo Mail
+            [description] => Create front-end contact forms that allow to send email messages based on custom templates.
+            [code] => OctoDevel.OctoMail
+            [updated_at] => 2014-05-23 10:04:41
+            [image] => http://octobercms.com/uploads/public/537/f16/ae5/thumb_169_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [3] => Array
+        (
+            [name] => RoomBooking
+            [description] => Booking plugin, with front Room list, Room details and Booking form, and backend for Rooms and Bookings
+            [code] => Tiipiik.Booking
+            [updated_at] => 2014-07-07 22:44:15
+            [image] => http://octobercms.com/uploads/public/53b/27d/26f/thumb_424_64x64_0_0_auto.png
+            [author] => October
+        )
+
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:41:03] Postback payload: Array
+(
+    [name] => form
+    [handler] => onPluginDetails
+)
+
+[2014/10/27 06:41:04] Server request: plugin/detail
+[2014/10/27 06:41:04] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/detail
+    [content_type] => text/html; charset=UTF-8
+    [http_code] => 500
+    [header_size] => 878
+    [request_size] => 182
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.355711
+    [namelookup_time] => 1.6E-5
+    [connect_time] => 0.161116
+    [pretransfer_time] => 0.161149
+    [size_upload] => 42
+    [size_download] => 44
+    [speed_download] => 123
+    [speed_upload] => 118
+    [download_content_length] => -1
+    [upload_content_length] => 42
+    [starttransfer_time] => 0.353875
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40852
+)
+
+[2014/10/27 06:41:04] Handler error (onPluginDetails): Server responded with error: A plugin with name "form" could not be found
+[2014/10/27 06:41:04] Trace log:
+#0 /var/www/coworking.biz/install_files/php/Installer.php(256): Installer->requestServerData('plugin/detail', Array)
+#1 /var/www/coworking.biz/install_files/php/Installer.php(53): Installer->onPluginDetails()
+#2 /var/www/coworking.biz/install_files/php/boot.php(55): Installer->__construct()
+#3 /var/www/coworking.biz/install.php(1): include('/var/www/cowork...')
+#4 {main}
+[2014/10/27 06:41:16] Server request: plugin/search
+[2014/10/27 06:41:16] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 836
+    [request_size] => 181
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.350423
+    [namelookup_time] => 0.004347
+    [connect_time] => 0.165369
+    [pretransfer_time] => 0.165412
+    [size_upload] => 41
+    [size_download] => 2
+    [speed_download] => 5
+    [speed_upload] => 117
+    [download_content_length] => -1
+    [upload_content_length] => 41
+    [starttransfer_time] => 0.348741
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40853
+)
+
+[2014/10/27 06:41:16] Execute handler (onSearchPlugins): Array
+(
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:41:19] Postback payload: Array
+(
+    [name] => LaminSanneh.FlexiContact
+    [handler] => onPluginDetails
+)
+
+[2014/10/27 06:41:20] Server request: plugin/detail
+[2014/10/27 06:41:20] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/detail
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 836
+    [request_size] => 202
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.355432
+    [namelookup_time] => 3.0E-5
+    [connect_time] => 0.160988
+    [pretransfer_time] => 0.161026
+    [size_upload] => 62
+    [size_download] => 326
+    [speed_download] => 917
+    [speed_upload] => 174
+    [download_content_length] => -1
+    [upload_content_length] => 62
+    [starttransfer_time] => 0.353527
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40854
+)
+
+[2014/10/27 06:41:20] Execute handler (onPluginDetails): Array
+(
+    [name] => Flexi Contact
+    [description] => A Flexible and Configurable Contact Form to Add to any Page
+    [code] => LaminSanneh.FlexiContact
+    [updated_at] => 2014-05-22 11:21:04
+    [image] => http://octobercms.com/uploads/public/537/dce/e4e/thumb_136_64x64_0_0_auto.png
+    [author] => October
+    [hash] => c16c766048e40a4202091631f8b520dc
+)
+
+[2014/10/27 06:41:26] Server request: plugin/search
+[2014/10/27 06:41:26] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 830
+    [request_size] => 180
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.34791
+    [namelookup_time] => 0.004236
+    [connect_time] => 0.165344
+    [pretransfer_time] => 0.165381
+    [size_upload] => 40
+    [size_download] => 2
+    [speed_download] => 5
+    [speed_upload] => 114
+    [download_content_length] => -1
+    [upload_content_length] => 40
+    [starttransfer_time] => 0.346627
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40855
+)
+
+[2014/10/27 06:41:26] Execute handler (onSearchPlugins): Array
+(
+)
+
+[2014/10/27 06:41:26] Server request: plugin/search
+[2014/10/27 06:41:26] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 830
+    [request_size] => 182
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.380237
+    [namelookup_time] => 1.7E-5
+    [connect_time] => 0.161109
+    [pretransfer_time] => 0.161143
+    [size_upload] => 42
+    [size_download] => 1136
+    [speed_download] => 2987
+    [speed_upload] => 110
+    [download_content_length] => -1
+    [upload_content_length] => 42
+    [starttransfer_time] => 0.375848
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40856
+)
+
+[2014/10/27 06:41:26] Execute handler (onSearchPlugins): Array
+(
+    [0] => Array
+        (
+            [name] => ProEvents
+            [description] => A powerful Events & Calendar October CMS Plugin.
+            [code] => Radiantweb.Proevents
+            [updated_at] => 2014-06-18 19:02:44
+            [image] => http://octobercms.com/uploads/public/537/e61/0a5/thumb_150_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [1] => Array
+        (
+            [name] => Octo Mail
+            [description] => Create front-end contact forms that allow to send email messages based on custom templates.
+            [code] => OctoDevel.OctoMail
+            [updated_at] => 2014-05-23 10:04:41
+            [image] => http://octobercms.com/uploads/public/537/f16/ae5/thumb_169_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [2] => Array
+        (
+            [name] => Octo Case
+            [description] => Create a products/services showcase or a sample photo gallery.
+            [code] => OctoDevel.OctoCase
+            [updated_at] => 2014-07-02 13:59:18
+            [image] => http://octobercms.com/uploads/public/53b/2a8/70a/thumb_425_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [3] => Array
+        (
+            [name] => Octo Slider
+            [description] => Create slideshows for your website using jquery slider plugins.
+            [code] => OctoDevel.OctoSlider
+            [updated_at] => 2014-07-10 21:46:50
+            [image] => http://octobercms.com/uploads/public/53b/eba/c74/thumb_512_64x64_0_0_auto.png
+            [author] => October
+        )
+
+)
+
+[2014/10/27 06:41:27] Server request: plugin/search
+[2014/10/27 06:41:27] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 832
+    [request_size] => 184
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.365775
+    [namelookup_time] => 1.7E-5
+    [connect_time] => 0.161184
+    [pretransfer_time] => 0.161217
+    [size_upload] => 44
+    [size_download] => 267
+    [speed_download] => 729
+    [speed_upload] => 120
+    [download_content_length] => -1
+    [upload_content_length] => 44
+    [starttransfer_time] => 0.361588
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40857
+)
+
+[2014/10/27 06:41:27] Execute handler (onSearchPlugins): Array
+(
+    [0] => Array
+        (
+            [name] => ProEvents
+            [description] => A powerful Events & Calendar October CMS Plugin.
+            [code] => Radiantweb.Proevents
+            [updated_at] => 2014-06-18 19:02:44
+            [image] => http://octobercms.com/uploads/public/537/e61/0a5/thumb_150_64x64_0_0_auto.png
+            [author] => October
+        )
+
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:41:30] Postback payload: Array
+(
+    [name] => Radiantweb.Proevents
+    [handler] => onPluginDetails
+)
+
+[2014/10/27 06:41:30] Server request: plugin/detail
+[2014/10/27 06:41:30] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/detail
+    [content_type] => text/html; charset=UTF-8
+    [http_code] => 500
+    [header_size] => 878
+    [request_size] => 198
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.349891
+    [namelookup_time] => 2.0E-5
+    [connect_time] => 0.161266
+    [pretransfer_time] => 0.161301
+    [size_upload] => 58
+    [size_download] => 69
+    [speed_download] => 197
+    [speed_upload] => 165
+    [download_content_length] => -1
+    [upload_content_length] => 58
+    [starttransfer_time] => 0.347608
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40858
+)
+
+[2014/10/27 06:41:30] Handler error (onPluginDetails): Server responded with error: Authority to provide plugin "Radiantweb.Proevents" could not be found
+[2014/10/27 06:41:30] Trace log:
+#0 /var/www/coworking.biz/install_files/php/Installer.php(256): Installer->requestServerData('plugin/detail', Array)
+#1 /var/www/coworking.biz/install_files/php/Installer.php(53): Installer->onPluginDetails()
+#2 /var/www/coworking.biz/install_files/php/boot.php(55): Installer->__construct()
+#3 /var/www/coworking.biz/install.php(1): include('/var/www/cowork...')
+#4 {main}
+[2014/10/27 06:41:37] Server request: plugin/search
+[2014/10/27 06:41:37] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 830
+    [request_size] => 180
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.347033
+    [namelookup_time] => 0.004294
+    [connect_time] => 0.165533
+    [pretransfer_time] => 0.165578
+    [size_upload] => 40
+    [size_download] => 2
+    [speed_download] => 5
+    [speed_upload] => 115
+    [download_content_length] => -1
+    [upload_content_length] => 40
+    [starttransfer_time] => 0.345858
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40859
+)
+
+[2014/10/27 06:41:37] Execute handler (onSearchPlugins): Array
+(
+)
+
+[2014/10/27 06:41:41] Server request: plugin/search
+[2014/10/27 06:41:41] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 836
+    [request_size] => 182
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.376266
+    [namelookup_time] => 2.2E-5
+    [connect_time] => 0.162119
+    [pretransfer_time] => 0.162154
+    [size_upload] => 42
+    [size_download] => 1442
+    [speed_download] => 3832
+    [speed_upload] => 111
+    [download_content_length] => -1
+    [upload_content_length] => 42
+    [starttransfer_time] => 0.371953
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40860
+)
+
+[2014/10/27 06:41:41] Execute handler (onSearchPlugins): Array
+(
+    [0] => Array
+        (
+            [name] => ProBlog
+            [description] => A powerful October CMS Blog plugin. Boost your SEO with robust blogging tools by Radiantweb.
+            [code] => Radiantweb.Problog
+            [updated_at] => 2014-06-18 19:04:37
+            [image] => http://octobercms.com/uploads/public/537/e60/500/thumb_149_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [1] => Array
+        (
+            [name] => Facebook Likebutton
+            [description] => Add the Facebook Like Button to your pages
+            [code] => Lyra.Likebutton
+            [updated_at] => 2014-05-22 12:40:08
+            [image] => http://octobercms.com/uploads/public/538/03c/f3c/thumb_197_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [2] => Array
+        (
+            [name] => Facebook
+            [description] => Add buttons to your website to help your visitors share content and connect on Facebook.
+            [code] => Alxy.Facebook
+            [updated_at] => 2014-05-23 10:17:16
+            [image] => http://octobercms.com/uploads/public/537/f1e/5d6/thumb_175_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [3] => Array
+        (
+            [name] => RoomBooking
+            [description] => Booking plugin, with front Room list, Room details and Booking form, and backend for Rooms and Bookings
+            [code] => Tiipiik.Booking
+            [updated_at] => 2014-07-07 22:44:15
+            [image] => http://octobercms.com/uploads/public/53b/27d/26f/thumb_424_64x64_0_0_auto.png
+            [author] => October
+        )
+
+    [4] => Array
+        (
+            [name] => FacebookFeed
+            [description] => Provides a Facebook feed import
+            [code] => Inkrement.FacebookFeed
+            [updated_at] => 2014-10-01 21:44:05
+            [image] => http://octobercms.com/uploads/public/542/3f1/90e/thumb_786_64x64_0_0_auto.png
+            [author] => October
+        )
+
+)
+
+[2014/10/27 06:41:42] Server request: plugin/search
+[2014/10/27 06:41:42] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 838
+    [request_size] => 183
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.348516
+    [namelookup_time] => 1.6E-5
+    [connect_time] => 0.16112
+    [pretransfer_time] => 0.161154
+    [size_upload] => 43
+    [size_download] => 2
+    [speed_download] => 5
+    [speed_upload] => 123
+    [download_content_length] => -1
+    [upload_content_length] => 43
+    [starttransfer_time] => 0.346902
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40861
+)
+
+[2014/10/27 06:41:42] Execute handler (onSearchPlugins): Array
+(
+)
+
+[2014/10/27 06:41:43] Server request: plugin/search
+[2014/10/27 06:41:43] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 830
+    [request_size] => 187
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.35224
+    [namelookup_time] => 1.7E-5
+    [connect_time] => 0.161163
+    [pretransfer_time] => 0.161197
+    [size_upload] => 47
+    [size_download] => 2
+    [speed_download] => 5
+    [speed_upload] => 133
+    [download_content_length] => -1
+    [upload_content_length] => 47
+    [starttransfer_time] => 0.350349
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40862
+)
+
+[2014/10/27 06:41:43] Execute handler (onSearchPlugins): Array
+(
+)
+
+[2014/10/27 06:41:43] Server request: plugin/search
+[2014/10/27 06:41:43] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 832
+    [request_size] => 188
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.389688
+    [namelookup_time] => 0.004319
+    [connect_time] => 0.165583
+    [pretransfer_time] => 0.165621
+    [size_upload] => 48
+    [size_download] => 2
+    [speed_download] => 5
+    [speed_upload] => 123
+    [download_content_length] => -1
+    [upload_content_length] => 48
+    [starttransfer_time] => 0.387607
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40863
+)
+
+[2014/10/27 06:41:43] Execute handler (onSearchPlugins): Array
+(
+)
+
+[2014/10/27 06:41:52] Server request: plugin/search
+[2014/10/27 06:41:52] Request information: Array
+(
+    [url] => http://octobercms.com/api/plugin/search
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 836
+    [request_size] => 181
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.358078
+    [namelookup_time] => 0.004313
+    [connect_time] => 0.165311
+    [pretransfer_time] => 0.165355
+    [size_upload] => 41
+    [size_download] => 2
+    [speed_download] => 5
+    [speed_upload] => 114
+    [download_content_length] => -1
+    [upload_content_length] => 41
+    [starttransfer_time] => 0.357078
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40864
+)
+
+[2014/10/27 06:41:52] Execute handler (onSearchPlugins): Array
+(
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:41:54] Postback payload: Array
+(
+    [step] => getMetaData
+    [meta] => 
+    [plugins] => Array
+        (
+            [0] => Array
+                (
+                    [name] => Flexi Contact
+                    [description] => A Flexible and Configurable Contact Form to Add to any Page
+                    [code] => LaminSanneh.FlexiContact
+                    [updated_at] => 2014-05-22 11:21:04
+                    [image] => http://octobercms.com/uploads/public/537/dce/e4e/thumb_136_64x64_0_0_auto.png
+                    [author] => October
+                    [hash] => c16c766048e40a4202091631f8b520dc
+                )
+
+        )
+
+    [handler] => onInstallStep
+)
+
+[2014/10/27 06:41:54] Install step: getMetaData
+[2014/10/27 06:41:55] Server request: core/install
+[2014/10/27 06:41:55] Request information: Array
+(
+    [url] => http://octobercms.com/api/core/install
+    [content_type] => application/json
+    [http_code] => 200
+    [header_size] => 830
+    [request_size] => 211
+    [filetime] => -1
+    [ssl_verify_result] => 0
+    [redirect_count] => 0
+    [total_time] => 0.418054
+    [namelookup_time] => 2.5E-5
+    [connect_time] => 0.161089
+    [pretransfer_time] => 0.161123
+    [size_upload] => 72
+    [size_download] => 152
+    [speed_download] => 363
+    [speed_upload] => 172
+    [download_content_length] => -1
+    [upload_content_length] => 72
+    [starttransfer_time] => 0.413731
+    [redirect_time] => 0
+    [redirect_url] => 
+    [primary_ip] => 50.116.3.170
+    [certinfo] => Array
+        (
+        )
+
+    [primary_port] => 80
+    [local_ip] => 10.3.1.240
+    [local_port] => 40865
+)
+
+[2014/10/27 06:41:55] Step getMetaData +OK
+[2014/10/27 06:41:55] Execute handler (onInstallStep): Array
+(
+    [result] => Array
+        (
+            [core] => Array
+                (
+                    [hash] => 1585a4bd16ddc0ad2e7804c223a12c6a
+                    [build] => 159
+                )
+
+            [plugins] => Array
+                (
+                    [LaminSanneh.FlexiContact] => c16c766048e40a4202091631f8b520dc
+                )
+
+            [themes] => Array
+                (
+                )
+
+        )
+
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:41:55] Postback payload: Array
+(
+    [step] => downloadCore
+    [meta] => Array
+        (
+            [core] => Array
+                (
+                    [hash] => 1585a4bd16ddc0ad2e7804c223a12c6a
+                    [build] => 159
+                )
+
+            [plugins] => Array
+                (
+                    [LaminSanneh.FlexiContact] => c16c766048e40a4202091631f8b520dc
+                )
+
+        )
+
+    [handler] => onInstallStep
+)
+
+[2014/10/27 06:41:55] Install step: downloadCore
+[2014/10/27 06:41:58] Saving to file (core): /var/www/coworking.biz/install_files/temp/a74ad8dfacd4f985eb3977517615ce25.arc
+[2014/10/27 06:41:58] Step downloadCore +OK
+[2014/10/27 06:41:58] Execute handler (onInstallStep): Array
+(
+    [result] => 
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:41:59] Postback payload: Array
+(
+    [step] => downloadPlugin
+    [meta] => Array
+        (
+            [core] => Array
+                (
+                    [hash] => 1585a4bd16ddc0ad2e7804c223a12c6a
+                    [build] => 159
+                )
+
+            [plugins] => Array
+                (
+                    [LaminSanneh.FlexiContact] => c16c766048e40a4202091631f8b520dc
+                )
+
+        )
+
+    [name] => LaminSanneh.FlexiContact
+    [handler] => onInstallStep
+)
+
+[2014/10/27 06:41:59] Install step: downloadPlugin
+[2014/10/27 06:41:59] Saving to file (LaminSanneh.FlexiContact-plugin): /var/www/coworking.biz/install_files/temp/4c9b0f2b95b6c1aac2a55578ad4be66b.arc
+[2014/10/27 06:41:59] Step downloadPlugin +OK
+[2014/10/27 06:41:59] Execute handler (onInstallStep): Array
+(
+    [result] => 
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:41:59] Postback payload: Array
+(
+    [step] => extractCore
+    [meta] => Array
+        (
+            [core] => Array
+                (
+                    [hash] => 1585a4bd16ddc0ad2e7804c223a12c6a
+                    [build] => 159
+                )
+
+            [plugins] => Array
+                (
+                    [LaminSanneh.FlexiContact] => c16c766048e40a4202091631f8b520dc
+                )
+
+        )
+
+    [handler] => onInstallStep
+)
+
+[2014/10/27 06:41:59] Install step: extractCore
+[2014/10/27 06:41:59] Extracting file (core): a74ad8dfacd4f985eb3977517615ce25.arc
+[2014/10/27 06:42:02] Step extractCore +OK
+[2014/10/27 06:42:02] Execute handler (onInstallStep): Array
+(
+    [result] => 1
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:42:02] Postback payload: Array
+(
+    [step] => extractPlugin
+    [meta] => Array
+        (
+            [core] => Array
+                (
+                    [hash] => 1585a4bd16ddc0ad2e7804c223a12c6a
+                    [build] => 159
+                )
+
+            [plugins] => Array
+                (
+                    [LaminSanneh.FlexiContact] => c16c766048e40a4202091631f8b520dc
+                )
+
+        )
+
+    [name] => LaminSanneh.FlexiContact
+    [handler] => onInstallStep
+)
+
+[2014/10/27 06:42:02] Install step: extractPlugin
+[2014/10/27 06:42:02] Extracting file (LaminSanneh.FlexiContact-plugin): 4c9b0f2b95b6c1aac2a55578ad4be66b.arc
+[2014/10/27 06:42:02] Step extractPlugin +OK
+[2014/10/27 06:42:02] Execute handler (onInstallStep): Array
+(
+    [result] => 1
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:42:03] Postback payload: Array
+(
+    [step] => setupConfig
+    [meta] => Array
+        (
+            [core] => Array
+                (
+                    [hash] => 1585a4bd16ddc0ad2e7804c223a12c6a
+                    [build] => 159
+                )
+
+            [plugins] => Array
+                (
+                    [LaminSanneh.FlexiContact] => c16c766048e40a4202091631f8b520dc
+                )
+
+        )
+
+    [db_type] => mysql
+    [db_host] => localhost
+    [db_port] => 
+    [db_name] => bc_coworking_cms
+    [db_user] => root
+    [db_pass] => *******
+    [admin_first_name] => Julian
+    [admin_last_name] => Smith
+    [admin_email] => *******@*****.com
+    [admin_login] => admin
+    [admin_password] => *******
+    [admin_confirm_password] => *******
+    [backend_uri] => /backend
+    [encryption_code] => *******
+    [file_mask] => 777
+    [folder_mask] => 777
+    [handler] => onInstallStep
+)
+
+[2014/10/27 06:42:03] Install step: setupConfig
+[2014/10/27 07:42:03] Step setupConfig +OK
+[2014/10/27 07:42:03] Execute handler (onInstallStep): Array
+(
+    [result] => 
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:42:03] Postback payload: Array
+(
+    [step] => createAdmin
+    [meta] => Array
+        (
+            [core] => Array
+                (
+                    [hash] => 1585a4bd16ddc0ad2e7804c223a12c6a
+                    [build] => 159
+                )
+
+            [plugins] => Array
+                (
+                    [LaminSanneh.FlexiContact] => c16c766048e40a4202091631f8b520dc
+                )
+
+        )
+
+    [db_type] => mysql
+    [db_host] => localhost
+    [db_port] => 
+    [db_name] => bc_coworking_cms
+    [db_user] => root
+    [db_pass] => *******
+    [admin_first_name] => Julian
+    [admin_last_name] => Smith
+    [admin_email] => *******@*****.com
+    [admin_login] => admin
+    [admin_password] => *******
+    [admin_confirm_password] => *******
+    [backend_uri] => /backend
+    [encryption_code] => *******
+    [file_mask] => 777
+    [folder_mask] => 777
+    [handler] => onInstallStep
+)
+
+[2014/10/27 06:42:03] Install step: createAdmin
+[2014/10/27 07:42:04] Step createAdmin +OK
+[2014/10/27 07:42:04] Execute handler (onInstallStep): Array
+(
+    [result] => 
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:42:04] Postback payload: Array
+(
+    [disableLog] => 1
+)
+
+[2014/10/27 06:42:04] Install step: setupProject
+[2014/10/27 06:42:04] Step setupProject +OK
+[2014/10/27 06:42:04] Execute handler (onInstallStep): Array
+(
+    [result] => 
+)
+
+.============================ POST REQUEST ==========================.
+[2014/10/27 06:42:05] Postback payload: Array
+(
+    [step] => finishInstall
+    [meta] => Array
+        (
+            [core] => Array
+                (
+                    [hash] => 1585a4bd16ddc0ad2e7804c223a12c6a
+                    [build] => 159
+                )
+
+            [plugins] => Array
+                (
+                    [LaminSanneh.FlexiContact] => c16c766048e40a4202091631f8b520dc
+                )
+
+        )
+
+    [hash] => 1585a4bd16ddc0ad2e7804c223a12c6a
+    [build] => 159
+    [handler] => onInstallStep
+)
+
+[2014/10/27 06:42:05] Install step: finishInstall
+[2014/10/27 07:42:05] Cleaning up file: 4c9b0f2b95b6c1aac2a55578ad4be66b.arc
+[2014/10/27 07:42:05] Cleaning up file: a74ad8dfacd4f985eb3977517615ce25.arc
+[2014/10/27 07:42:05] Step finishInstall +OK
+[2014/10/27 07:42:05] Execute handler (onInstallStep): Array
+(
+    [result] => 
+)
+
