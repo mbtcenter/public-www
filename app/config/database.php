@@ -58,7 +58,7 @@ return array(
             'port'      => 3306,
             'database'  => 'bc_coworking_cms',
             'username'  => 'root',
-            'password'  => 'k3xt7crn',
+            'password'  => '**This was updated as the repo is public**',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
