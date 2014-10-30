@@ -441,10 +441,10 @@ header{
 	border-radius: 0;
 }
 .aboutus .btn-primary:hover {
-	background:#ff675f;
+	background:#f48f2b;
 }
 .skillset {
-	background:#ff675f;
+	background:#f48f2b;
 	display:table;
 	width:100%;
 }
@@ -827,7 +827,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 ------------------------------------------------------*/
 
 .contact{
-	background:#ff675f;
+	background:#f48f2b;
 }
 .contact .container{
 	padding-top:116px;
@@ -952,7 +952,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 	font-weight: 500;
 }
 .error_message{
-	color: #ff675f;
+	color: #f48f2b;
 	padding-bottom: 15px;
 	font-weight: 500;
 }
