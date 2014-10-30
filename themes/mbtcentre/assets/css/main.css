@@ -148,7 +148,7 @@ h4.subHeading{
 	padding-bottom:35px;
 	padding-right:50px;
 	margin-bottom:35px;
-	border-bottom:11px solid #ff554e;
+	border-bottom:11px solid #f48f2b;
 	display:inline-block;
 }
 .heading h2 span {
@@ -212,7 +212,7 @@ header{
 	color:#fff;
 }
 .bannerText h1 span{
-	color:#ff554e;
+	color:#f48f2b;
 }  
 .bannerText h3{
 	color:#fff;
@@ -242,8 +242,8 @@ header{
 	margin:0 auto;
 }
 .bannerText .mbnt:hover{
-	color:#ff554e;
-	border-color:#ff554e;
+	color:#f48f2b;
+	border-color:#f48f2b;
 }
 
 
@@ -379,7 +379,7 @@ header{
 	background: transparent;
 }
 .isStuck{
-	background:#ff554e ;
+	background:#f48f2b ;
 	
 	-o-transition: all .5s;
     -ms-transition: all .5s;
@@ -490,7 +490,7 @@ header{
 	width:120px;
 	height:120px;
 	display:inline-block;
-	background-color:#ff554e;
+	background-color:#f48f2b;
 	text-align:center;
 	color:#fff;
 	-webkit-border-radius:50%;
@@ -812,7 +812,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 .experdate {
 	width:114px;
 	height:114px;
-	background:#ff554e;
+	background:#f48f2b;
 	color:#fff;
 	padding-top:40px;
 	font-size:16px;
@@ -927,7 +927,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 
 
 .conForm .submitBnt{
-	background:#ff554e;
+	background:#f48f2b;
 	font-family: 'Montserrat', sans-serif;
 	color:#fff;
 	font-size:16px;
@@ -1011,7 +1011,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 	text-decoration:none;
 }
 .cinfoBox p a:hover{
-	color:#ff554e;
+	color:#f48f2b;
 }
 
 /*----------------------------------------------------
