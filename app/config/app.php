@@ -78,7 +78,7 @@ return array(
     |
     */
 
-    'key' => '0y7whtk4nf57dwnxf9vIwVzmg55I',
+    'key' => '**This was updated as the repo is public**',
     'cipher' => MCRYPT_RIJNDAEL_128,
 
     /*
