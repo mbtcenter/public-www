@@ -100,6 +100,8 @@ class Controller extends BaseController
 
     protected static $instance = null;
 
+    protected $partialComponentStack = [];
+
     /**
      * Creates the controller.
      * @param \Cms\Classes\Theme $theme Specifies the CMS theme.
@@ -192,7 +194,8 @@ class Controller extends BaseController
          */
         if (!$page->layout) {
             $layout = Layout::initFallback($this->theme);
-        } elseif (($layout = Layout::loadCached($this->theme, $page->layout)) === null) {
+        }
+        elseif (($layout = Layout::loadCached($this->theme, $page->layout)) === null) {
             throw new CmsException(Lang::get('cms::lang.layout.not_found', ['name'=>$page->layout]));
         }
 
@@ -278,7 +281,8 @@ class Controller extends BaseController
             $template = $this->twig->loadTemplate($this->page->getFullPath());
             $this->pageContents = $template->render($this->vars);
             CmsException::unmask();
-        } else {
+        }
+        else {
             $this->pageContents = $apiResult;
         }
 
@@ -366,15 +370,19 @@ class Controller extends BaseController
     {
         if (!$this->layout->isFallBack()) {
             foreach ($this->layout->settings['components'] as $component => $properties) {
-                list($name, $alias) = strpos($component, ' ') ?
-                    explode(' ', $component) : array($component, $component);
+                list($name, $alias) = strpos($component, ' ')
+                    ? explode(' ', $component)
+                    : [$component, $component];
+
                 $this->addComponent($name, $alias, $properties, true);
             }
         }
 
         foreach ($this->page->settings['components'] as $component => $properties) {
-            list($name, $alias) = strpos($component, ' ') ?
-                explode(' ', $component) : array($component, $component);
+            list($name, $alias) = strpos($component, ' ')
+                ? explode(' ', $component)
+                : [$component, $component];
+
             $this->addComponent($name, $alias, $properties);
         }
     }
@@ -391,6 +399,8 @@ class Controller extends BaseController
     {
         $manager = ComponentManager::instance();
 
+        $properties = $this->setComponentPropertiesFromParameters($properties, []);
+
         if ($addToLayout) {
             if (!$componentObj = $manager->makeComponent($name, $this->layoutObj, $properties)) {
                 throw new CmsException(Lang::get('cms::lang.component.not_found', ['name'=>$name]));
@@ -398,7 +408,8 @@ class Controller extends BaseController
 
             $componentObj->alias = $alias;
             $this->vars[$alias] = $this->layout->components[$alias] = $componentObj;
-        } else {
+        }
+        else {
             if (!$componentObj = $manager->makeComponent($name, $this->pageObj, $properties)) {
                 throw new CmsException(Lang::get('cms::lang.component.not_found', ['name'=>$name]));
             }
@@ -438,7 +449,8 @@ class Controller extends BaseController
                             throw new CmsException(Lang::get('cms::lang.partial.invalid_name', ['name'=>$partial]));
                         }
                     }
-                } else {
+                }
+                else {
                     $partialList = [];
                 }
 
@@ -457,7 +469,8 @@ class Controller extends BaseController
                  */
                 if (is_array($result)) {
                     $responseContents = array_merge($responseContents, $result);
-                } elseif (is_string($result)) {
+                }
+                elseif (is_string($result)) {
                     $responseContents['result'] = $result;
                 }
 
@@ -477,16 +490,19 @@ class Controller extends BaseController
                 }
 
                 return Response::make()->setContent($responseContents);
-            } catch (ValidationException $ex) {
+            }
+            catch (ValidationException $ex) {
                 /*
                  * Handle validation errors
                  */
                 $responseContents['X_OCTOBER_ERROR_FIELDS'] = $ex->getFields();
                 $responseContents['X_OCTOBER_ERROR_MESSAGE'] = $ex->getMessage();
                 return Response::make($responseContents, 406);
-            } catch (ApplicationException $ex) {
+            }
+            catch (ApplicationException $ex) {
                 return Response::make($ex->getMessage(), 500);
-            } catch (Exception $ex) {
+            }
+            catch (Exception $ex) {
                 /*
                  * Display a "dumbed down" error if custom page is activated
                  * otherwise display a more detailed error.
@@ -527,10 +543,11 @@ class Controller extends BaseController
                 $result = $componentObj->$handlerName();
                 return ($result) ?: true;
             }
+        }
         /*
          * Process code section handler
          */
-        } else {
+        else {
             if (method_exists($this->pageObj, $handler)) {
                 $result = $this->pageObj->$handler();
                 return ($result) ?: true;
@@ -664,6 +681,8 @@ class Controller extends BaseController
      */
     public function renderPartial($name, $parameters = [], $throwException = true)
     {
+        $vars = $this->vars;
+
         /*
          * Alias @ symbol for ::
          */
@@ -684,21 +703,25 @@ class Controller extends BaseController
             if (!strlen($componentAlias)) {
                 if ($this->componentContext !== null) {
                     $componentObj = $this->componentContext;
-                } elseif (($componentObj = $this->findComponentByPartial($partialName)) === null) {
+                }
+                elseif (($componentObj = $this->findComponentByPartial($partialName)) === null) {
                     if ($throwException) {
                         throw new CmsException(Lang::get('cms::lang.partial.not_found', ['name'=>$name]));
-                    } else {
+                    }
+                    else {
                         return false;
                     }
                 }
             /*
              * Component alias is supplied
              */
-            } else {
+            }
+            else {
                 if (($componentObj = $this->findComponentByName($componentAlias)) === null) {
                     if ($throwException) {
                         throw new CmsException(Lang::get('cms::lang.component.not_found', ['name'=>$componentAlias]));
-                    } else {
+                    }
+                    else {
                         return false;
                     }
                 }
@@ -726,7 +749,8 @@ class Controller extends BaseController
             if ($partial === null) {
                 if ($throwException) {
                     throw new CmsException(Lang::get('cms::lang.partial.not_found', ['name'=>$name]));
-                } else {
+                }
+                else {
                     return false;
                 }
             }
@@ -735,25 +759,79 @@ class Controller extends BaseController
              * Set context for self access
              */
             $this->vars['__SELF__'] = $componentObj;
-        } else {
+        }
+        else {
             /*
              * Process theme partial
              */
             if (($partial = Partial::loadCached($this->theme, $name)) === null) {
                 if ($throwException) {
                     throw new CmsException(Lang::get('cms::lang.partial.not_found', ['name'=>$name]));
-                } else {
+                }
+                else {
                     return false;
                 }
             }
         }
 
+        /*
+         * Run functions for CMS partials only (Cms\Classes\Partial)
+         */
+
+        if ($partial instanceof Partial) {
+            $manager = ComponentManager::instance();
+
+            foreach ($partial->settings['components'] as $component => $properties) {
+                list($name, $alias) = strpos($component, ' ')
+                    ? explode(' ', $component)
+                    : [$component, $component];
+
+                $properties = $this->setComponentPropertiesFromParameters($properties, $parameters, []);
+
+                if (!$componentObj = $manager->makeComponent($name, $this->pageObj, $properties)) {
+                    throw new CmsException(Lang::get('cms::lang.component.not_found', ['name'=>$name]));
+                }
+
+                $componentObj->alias = $alias;
+                $parameters[$alias] = $partial->components[$alias] = $componentObj;
+
+                array_push($this->partialComponentStack, [
+                    'name' => $alias,
+                    'obj' => $componentObj
+                ]);
+
+                $componentObj->init();
+                $componentObj->onInit(); // Deprecated: Remove ithis line if year >= 2015
+            }
+
+            CmsException::mask($this->page, 300);
+            $parser = new CodeParser($partial);
+            $partialObj = $parser->source($this->page, $this->layout, $this);
+            CmsException::unmask();
+
+            CmsException::mask($partial, 300);
+            $partialObj->onStart();
+            $partial->runComponents();
+            $partialObj->onEnd();
+            CmsException::unmask();
+        }
+
+        /*
+         * Render the parital
+         */
         CmsException::mask($partial, 400);
         $this->loader->setObject($partial);
         $template = $this->twig->loadTemplate($partial->getFullPath());
         $result = $template->render(array_merge($this->vars, $parameters));
         CmsException::unmask();
 
+        if ($partial instanceof Partial) {
+            if ($this->partialComponentStack) {
+                array_pop($this->partialComponentStack);
+            }
+        }
+
+        $this->vars = $vars;
         $this->componentContext = null;
         return $result;
     }
@@ -769,12 +847,14 @@ class Controller extends BaseController
          */
         if ($event = $this->fireEvent('page.beforeRenderContent', [$name], true)) {
             $content = $event;
-        } elseif ($event = Event::fire('cms.page.beforeRenderContent', [$this, $name], true)) {
+        }
+        elseif ($event = Event::fire('cms.page.beforeRenderContent', [$this, $name], true)) {
             $content = $event;
+        }
         /*
          * Load content from theme
          */
-        } elseif (($content = Content::loadCached($this->theme, $name)) === null) {
+        elseif (($content = Content::loadCached($this->theme, $name)) === null) {
             throw new CmsException(Lang::get('cms::lang.content.not_found', ['name'=>$name]));
         }
 
@@ -926,7 +1006,8 @@ class Controller extends BaseController
         if (is_array($url)) {
             $_url = Request::getBaseUrl();
             $_url .= CombineAssets::combine($url, $themePath);
-        } else {
+        }
+        else {
             $_url = Request::getBasePath().$themePath;
             if ($url !== null) {
                 $_url .= '/'.$url;
@@ -959,6 +1040,11 @@ class Controller extends BaseController
 
         if (isset($this->layout->components[$name])) {
             return $this->layout->components[$name];
+        }
+
+        foreach ($this->partialComponentStack as $componentInfo) {
+            if ($componentInfo['name'] == $name)
+                return $componentInfo['obj'];
         }
 
         return null;
@@ -1017,50 +1103,40 @@ class Controller extends BaseController
     }
 
     /**
-     * Creates a basic component object for another page, useful for extracting properties.
-     * @param  string $page  Page name or page file name
-     * @param  string $class Component class name
-     * @return ComponentBase
+     * Sets component property values from partial parameters. 
+     * The property values should be defined as {{ param }}.
+     * @param array &$properties Specifies the component properties loaded from the partial.
+     * @param array $parameters Specifies the partial parameters.
+     * @return Returns updated properties.
      */
-    // public function getOtherPageComponent($page, $class)
-    // {
-    //     $class = Str::normalizeClassName($class);
-    //     $theme = $this->getTheme();
-    //     $manager = ComponentManager::instance();
-    //     $componentObj = new $class;
+    protected function setComponentPropertiesFromParameters(&$properties, $parameters)
+    {
+        $result = [];
 
-    //     if (($page = Page::loadCached($theme, $page)) && isset($page->settings['components'])) {
-    //         foreach ($page->settings['components'] as $component => $properties) {
-    //             list($name, $alias) = strpos($component, ' ') ?
-    //                 explode(' ', $component) :
-    //                 array($component, $component)
-    //             ;
-    //             if ($manager->resolve($name) == $class) {
-    //                 $componentObj->setProperties($properties);
-    //                 $componentObj->alias = $alias;
-    //                 return $componentObj;
-    //             }
-    //         }
+        $routerParameters = $this->router->getParameters();
 
-    //         if (!isset($page->settings['layout']))
-    //             return null;
+        foreach ($properties as $propertyName => $propertyValue) {
+            $matches = [];
+            if (preg_match('/^\{\{([^\}]+)\}\}$/', $propertyValue, $matches)) {
+                $paramName = trim($matches[1]);
 
-    //         $layout = $page->settings['layout'];
-    //         if (($layout = Layout::loadCached($theme, $layout)) && isset($layout->settings['components'])) {
-    //             foreach ($layout->settings['components'] as $component => $properties) {
-    //                 list($name, $alias) = strpos($component, ' ') ?
-    //                     explode(' ', $component) :
-    //                     array($component, $component)
-    //                 ;
-    //                 if ($manager->resolve($name) == $class) {
-    //                     $componentObj->setProperties($properties);
-    //                     $componentObj->alias = $alias;
-    //                     return $componentObj;
-    //                 }
-    //             }
-    //         }
-    //     }
+                if (substr($paramName, 0, 1) == ':') {
+                    $paramName = substr($paramName, 1);
+                    $result[$propertyName] = array_key_exists($paramName, $routerParameters)
+                        ? $routerParameters[$paramName]
+                        : null;
+                }
+                else {
+                    $result[$propertyName] = array_key_exists($paramName, $parameters)
+                        ? $parameters[$paramName]
+                        : null;
+                }
+            }
+            else {
+                $result[$propertyName] = $propertyValue;
+            }
+        }
 
-    //     return null;
-    // }
+        return $result;
+    }
 }

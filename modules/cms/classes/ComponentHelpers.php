@@ -20,21 +20,23 @@ class ComponentHelpers
         $result = [];
 
         $property = [
-            'property'          => 'oc.alias',
-            'title'             => Lang::get('cms::lang.component.alias'),
-            'description'       => Lang::get('cms::lang.component.alias_description'),
-            'type'              => 'string',
-            'validationPattern' => '^[a-zA-Z]+[0-9a-z\_]*$',
-            'validationMessage' => Lang::get('cms::lang.component.validation_message')
+            'property'              => 'oc.alias',
+            'title'                 => Lang::get('cms::lang.component.alias'),
+            'description'           => Lang::get('cms::lang.component.alias_description'),
+            'type'                  => 'string',
+            'validationPattern'     => '^[a-zA-Z]+[0-9a-z\_]*$',
+            'validationMessage'     => Lang::get('cms::lang.component.validation_message'),
+            'showExternalParameter' => false
         ];
         $result[] = $property;
 
         $properties = $component->defineProperties();
         foreach ($properties as $name => $params) {
             $property = [
-                'property' => $name,
-                'title'    => isset($params['title']) ? $params['title'] : $name,
-                'type'     => isset($params['type']) ? $params['type'] : 'string'
+                'property'              => $name,
+                'title'                 => array_get($params, 'title', $name),
+                'type'                  => array_get($params, 'type', 'string'),
+                'showExternalParameter' => array_get($params, 'showExternalParameter', true)
             ];
 
             foreach ($params as $name => $value) {
@@ -57,7 +59,8 @@ class ComponentHelpers
                     array_walk($property[$name], function (&$_value, $key) {
                         $_value = Lang::get($_value);
                     });
-                } else {
+                }
+                else {
                     $property[$name] = Lang::get($value);
                 }
             }
