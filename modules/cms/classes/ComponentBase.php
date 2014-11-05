@@ -168,7 +168,9 @@ abstract class ComponentBase extends Extendable
     }
 
     /**
-     * Returns a defined property or parameter value.
+     * @deprecated Returns a defined property or parameter value.
+     * @todo Remove this method if year >= 2015
+     * @see Docs: Components > External Parameters
      * @param $name The property or parameter name to look for.
      * @param $default A default value to return if no value is found.
      * @return string
@@ -183,36 +185,4 @@ abstract class ComponentBase extends Extendable
 
         return $value;
     }
-
-    /**
-     * Creates a page link to another page. Allows mapping to the other page's
-     * component properties for the purpose of extracting URL routing parameters.
-     * @param  string $page  Page name or page file name
-     * @param  string $class Component class name
-     * @param  array $mappings ['componentProperty' => 'routed value']
-     * @return string
-     */
-    // protected function makePageLink($page, $class, $mappings = [])
-    // {
-    //     if (!isset($this->pageLinkCache[$page.$class])) {
-    //         $this->pageLinkCache[$page.$class] = $this->getOtherPageComponent($page, $class);
-    //     }
-
-    //     if (!$component = $this->pageLinkCache[$page.$class])
-    //         return null;
-
-    //     $params = [];
-    //     foreach ($mappings as $property => $value) {
-
-    //         if (!$param = $component->property($property))
-    //             continue;
-
-    //         if (substr($param, 0, 1) == ':')
-    //             $param = substr($param, 1);
-
-    //         $params[$param] = $value;
-    //     }
-
-    //     return $this->pageUrl($page, $params);
-    // }
 }

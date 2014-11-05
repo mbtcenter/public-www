@@ -52,10 +52,6 @@ class OctoberUpdate extends Command
             $disableThemes = true;
         }
 
-        if (Config::get('cms.disableCoreUpdates', false)) {
-            $disableCore = true;
-        }
-
         /*
          * Perform update
          */
@@ -65,7 +61,8 @@ class OctoberUpdate extends Command
         if ($updates == 0) {
             $this->output->writeln('<info>No new updates found</info>');
             return;
-        } else {
+        }
+        else {
             $this->output->writeln(sprintf('<info>Found %s new %s!</info>', $updates, Str::plural('update', $updates)));
         }
 

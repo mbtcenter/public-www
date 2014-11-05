@@ -76,7 +76,8 @@ class Index extends Controller
             new ComponentList($this, 'componentList');
 
             new AssetList($this, 'assetList');
-        } catch (Exception $ex) {
+        }
+        catch (Exception $ex) {
             $this->handleError($ex);
         }
     }
@@ -90,6 +91,8 @@ class Index extends Controller
         $this->addJs('/modules/cms/assets/js/october.cmspage.js', 'core');
         $this->addJs('/modules/cms/assets/js/october.dragcomponents.js', 'core');
         $this->addJs('/modules/cms/assets/js/october.tokenexpander.js', 'core');
+        $this->addJs('/modules/backend/formwidgets/codeeditor/assets/js/codeeditor.js', 'core');
+
         $this->addCss('/modules/cms/assets/css/october.components.css', 'core');
 
         // Preload Ace editor modes explicitly, because they could be changed dynamically
@@ -236,7 +239,8 @@ class Index extends Controller
                     $deleted[] = $path;
                 }
             }
-        } catch (Exception $ex) {
+        }
+        catch (Exception $ex) {
             $error = $ex->getMessage();
         }
 

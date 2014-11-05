@@ -17,13 +17,19 @@ class Mailer extends MailerBase
     /**
      * Send a new message using a view.
      *
-     * @param  string|array  $view
-     * @param  array  $data
-     * @param  Closure|string  $callback
+     * @param  string|array $view
+     * @param  array $data
+     * @param  Closure|string $callback
      * @return void
      */
     public function send($view, array $data, $callback)
     {
+        /*
+         * Extensbility
+         */
+        if (Event::fire('mailer.beforeSend', [$view, $data, $callback], true) === false) return;
+        if ($this->fireEvent('mailer.beforeSend', [$view, $data, $callback], true) === false) return;
+
         /*
          * Inherit logic from Illuminate\Mail\Mailer
          */
@@ -39,8 +45,8 @@ class Mailer extends MailerBase
          * $message - Illuminate\Mail\Message object,
          *            check Swift_Mime_SimpleMessage for useful functions.
          */
-        if (Event::fire('mailer.beforeSend', [$this, $view, $message], true) === false) return;
-        if ($this->fireEvent('mailer.beforeSend', [$view, $message], true) === false) return;
+        if (Event::fire('mailer.prepareSend', [$this, $view, $message], true) === false) return;
+        if ($this->fireEvent('mailer.prepareSend', [$view, $message], true) === false) return;
 
         /*
          * Send the message
@@ -58,10 +64,10 @@ class Mailer extends MailerBase
     /**
      * Add the content to a given message.
      *
-     * @param  \Illuminate\Mail\Message  $message
-     * @param  string  $view
-     * @param  string  $plain
-     * @param  array   $data
+     * @param  \Illuminate\Mail\Message $message
+     * @param  string $view
+     * @param  string $plain
+     * @param  array $data
      * @return void
      */
     protected function addContent($message, $view, $plain, $data)
