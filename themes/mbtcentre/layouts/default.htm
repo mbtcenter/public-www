@@ -336,14 +336,28 @@ description = "Default layout"
             <p>1300 88 38 48
 hello@coworking.biz</p>
          </div>
+        
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 conForm">
-        <div id="message"></div>
-        <form method="post" action="php/contact.php" name="cform" id="cform">
-          <input name="name" id="name" type="text" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" placeholder="Your name" >
-          <input name="email" id="email" type="email" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 noMarr" placeholder="Your email" >
-          <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your message"></textarea>
+        <form role="form"
+          data-request="onOctoMailSent"
+          data-request-update="'confirm': '.simple-msg'"
+          data-request-success="$('.form-groups').slideUp(1000)"
+          name="cform" id="cform">
+          <div class="form-groups">
+          <div class="form-group">
+            <input name="name" id="name" type="text" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" placeholder="Your name" >
+          </div>
+          <div class="form-group">
+            <input name="email" id="email" type="email" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 noMarr" placeholder="Your email" >
+          </div>
+          <div class="form-group">
+            <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your message"></textarea>
+          </div>
           <input type="submit" id="submit" name="send" class="submitBnt" value="Send message">
-          <div id="simple-msg"></div>
+          <div id="simple-msg" class="simple-msg">
+            <!--This will be the container for confirmation when sent-->
+          </div>
+          </div>
         </form>
       </div>
       </div>
