@@ -1,0 +1,13 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+  name:
+    label: Name
+    span: left
+
+  email:
+    label: Email
+    span: right

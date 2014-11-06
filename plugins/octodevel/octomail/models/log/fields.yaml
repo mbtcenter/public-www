@@ -1,0 +1,31 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+  template_id:
+    type: OctoDevel\OctoMail\FormWidgets\TemplateData
+    span: left
+    label: Template
+
+  sender_agent:
+    type: OctoDevel\OctoMail\FormWidgets\UserAgent
+    span: right
+    label: User Agent
+
+  sender_ip:
+    span: left
+    label: Sender Ip
+
+  sent_at:
+    span: right
+    label: Sent At
+
+  sent_at:
+    span: right
+    label: Sent At
+
+  data:
+    type: OctoDevel\OctoMail\FormWidgets\JsonRender
+    span: left
+    label: Sent Data
