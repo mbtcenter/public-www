@@ -39,55 +39,11 @@ description = "Default layout"
 <!--Header start -->
 <header>
     <!--banner start-->
-    <div class="banner row" id="banner">
-        <div class="bannerText">
-        <span class="bannerLogo">
-          <img src="{{ 'assets/images/mbtc_logo.svg'|theme }}" alt="Melbourne Bitcoin Technology Centre">
-        </span>
-        <h3>Melbourne Bitcoin Technology Centre</h3>
-        <h1>Bitcoin <span>Co-Working</span></h1>
-        <h3>Startup + hacker space, Melbourne</h3>
-        <p>Building the Bitcoin ecosystem with love, in Melbourne, Australia</p>
-        <a href="#contactDetails" class="mbnt">Join us</a>
-      </div>
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadd slides-container" style="height:100%"> 
-        <!--background slide show start-->
-        <div class="slide"> 
-          <img src="{{ 'assets/images/header-image/header_1920_1080.png'|theme }}" alt="image01"> </div>
-        <!--background slide show end--> 
-      </div>
-    </div>
+    {% partial "banner_area" %}
     <!--banner end--> 
     
     <!--menu start-->
-    <div class="menu">
-      <div class="navbar-wrapper">
-        <div class="container">
-          <div class="navwrapper">
-            <div class="navbar navbar-inverse navbar-static-top">
-              <div class="container">
-                <!--<div class="logo">logo</div> -->
-                <div class="navArea">
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                     <!-- <a class="navbar-brand" href="#">Menu</a>  --></div>
-                    <div class="navbar-collapse collapse">
-                      <ul class="nav navbar-nav">
-                        <li class="menuItem active"><a href="#wrapper">Home</a></li>
-                        <li class="menuItem"><a href="#aboutus">About Us</a></li>
-                        <li class="menuItem"><a href="#ourwork">Members</a></li>
-                        <li class="menuItem"><a href="#experience">Working Here</a></li>
-                        <li class="menuItem"><a href="#contact">Contact</a></li>
-                      </ul>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Navbar -->
-        </div>
-      </div>
-    </div>
+    {% partial "menu_top" %}
     <!--menu end--> 
   </header>
   <!--Header end -->
@@ -110,7 +66,7 @@ description = "Default layout"
       <img src="{{ 'assets/images/btc_logo.png'|theme }}" class="img-circle" alt=""></div>
         <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left media">
           <h3>Co-Working</h3>
-            <h4>Design, Develop &amp; Share Ideas</h4>
+            <h4>Design, Develop & Share Ideas</h4>
             <p>Bitcoin Co-Working is the premiere collaboration, development and cultural hub for Bitcoin related start-up and projects in Melbourne - Australia.</p>
 <p>We bring together a unique mix of projects and people building the digital economy and the future of money.</p>
 <p><a role="button" class="btn btn-primary btn-lg">Download Brochure</a></p>
@@ -119,193 +75,23 @@ description = "Default layout"
       </div>     
     </div>    
   </section>
+  
   <!--Skillset start -->
-  <section class="skillset">
-    <div class="container">
-      <div class="row">
-            <div class="skills col-xs-12 col-sm-3 col-md-3 col-lg-3">
-              <img src="{{ 'assets/images/people/kmatheson_pic.png'|theme }}" class="img-circle" alt="">
-                <h3>Community Lead</h3>
-                <p>Kyle Matheson</p>
-            </div>
-            <div class="skills col-xs-12 col-sm-3 col-md-3 col-lg-3">
-              <img src="{{ 'assets/images/people/acheng_pic.png'|theme }}" class="img-circle" alt="">
-                <h3>Events Co-ordinator</h3>
-                <p>April Cheng</p>
-            </div>
-            <div class="skills col-xs-12 col-sm-3 col-md-3 col-lg-3">
-              <img src="{{ 'assets/images/people/jsmith_pic.png'|theme }}" class="img-circle" alt="">
-                <h3>IT System &amp; Support</h3>
-                <p>Julian Smith</p>
-            </div>
-            <div class="skills col-xs-12 col-sm-3 col-md-3 col-lg-3">
-              <img src="{{ 'assets/images/people/proussakis_pic.png'|theme }}" class="img-circle" alt="">
-                <h3>Communication Manager</h3>
-                <p>Pantelis Roussakis</p>
-            </div>
-        </div>
-    </div>
-  </section>
+  {% partial "our_team" %}
   <!--Skillset end -->
+  
   <!--My Experties start -->
-  <section class="myexperties" id="myexperties">
-    <div class="container">
-        <div class="heading">
-        <h2>Our <span>Focus</span></h2>
-        <h3>The Bitcoin ecosystem is in its infancy and is fertile for innvoation and experimentation.
-        <br> There are emmerging spaces for focused busniesses and projects to further drive the uptake and availaibility of access to technologies leveraging the blockchain.
-        <br> We aim to foster and support this activity through the creation of a community of driven and passionate advocates for Bitcoin and the opportunities it affords into the future.
-        </h3>        
-      </div>
-        
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-              <div class="expertiesico">
-                  <span class="ico"><i class="fa fa-btc fa-5x"></i></span>
-                </div>
-            </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-              <h4>Build</h4>
-                <p>If you have a project in the Bitcoin space there is no better place to build out your MVP than right here. If you have the passion and the drive to create a unique and amazing Bitcoin connected product, project or service then this home is made for you.</p>
-            </div>
-        </div>
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-              <div class="expertiesico">
-                  <span class="ico"><i class="fa fa-flask fa-5x"></i></span>
-                </div>
-            </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-              <h4>Test</h4>
-                <p>With a peer-group of technology, communications and market experts your new home gives you direct access to some of the best people and networks in the industry.</p>
-            </div>
-        </div>
-        <div class="row media">
-          <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-              <div class="expertiesico">
-                  <span class="ico"><i class="fa fa-rocket fa-5x"></i></span>
-                </div>
-            </div>
-          <div class="expertiesdesc col-xs-12 col-sm-9 col-md-9 col-lg-9">
-              <h4>Launch</h4>
-                <p>Taking your idea to market is a huge challange, but every peer in the space knows and understands that journey and want to help you on your way. If you need the backing and the resources to change the world there is no better place to launch than Bitcoin Co-Working Melbourne</p>
-            </div>
-        </div>
-    </div>
-  </section>
+  {% partial "our_focus" %}
   <!--My Experties end -->
+  
   <!--about us end--> 
   
-<!--portfolio start-->
-  <section class="protfolio" id="ourwork">
-    <div class="container">
-        <div class="heading">
-            <h2>Member <span>Projects</span></h2>
-            <h3>The strength of our communicity is built on the diversity of our members' projects.</h3>
-            
-        </div>
-    </div>
-    <div class="row">
-      <div class="portfolioFilter">
-        <ul>
-          <li><a href="#" data-filter="*" class="current">All</a></li>
-          <li><a href="#" data-filter=".branding">Trading</a></li>
-          <li><a href="#" data-filter=".webdesign">Apps</a></li>
-          <li><a href="#" data-filter=".wordpress">Hardware</a></li>
-          <li><a href="#" data-filter=".photography">Media</a></li>
-        </ul>
-      </div>
-     <ul class="portfolioContainer row">
-      <li class="branding col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/1.jpg" title="Project Title2" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a></span> </span> <img src="http://placehold.it/387x290&text=project1" alt="" > </div>
-        </li>
-        <li class="branding wordpress photography col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/2.jpg" title="Project Title2" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="http://placehold.it/387x290&text=project2" alt="" > </div>
-        </li>
-        <li class="wordpress photography col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/3.jpg" title="Project Title3" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="http://placehold.it/387x290&text=project3" alt="" > </div>
-        </li>
-        <li class="webdesign wordpress col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/4.jpg" title="Project Title4" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="http://placehold.it/387x290&text=project4" alt="" > </div>
-        </li>
-        <li class="wordpress branding col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="{{ 'assets/images/projects/big-images/5.png'|theme }}" title="millennius.com" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="http://www.millennius.com" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="{{ 'assets/images/projects/thumb-images/5.png'|theme }}" alt="" > </div>
-        </li>
-        <li class="branding webdesign photography col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/6.jpg" title="Project Title6" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="http://placehold.it/387x290&text=project6" alt="" > </div>
-        </li>
-        <li class="wordpress branding col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/7.jpg" title="Project Title7" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="http://placehold.it/387x290&text=project7" alt="" > </div>
-        </li>
-        <li class="branding webdesign photography col-xs-6 col-sm-4 col-md-3 col-lg-3">
-          <div class="lightCon"> <span class="hoverBox"> <span class="smallIcon"> <a rel="lightbox-demo" href="images/projects/big-images/8.jpg" title="Project Title8" class="zoom lb lb_warsaw1"><i class="fa fa-search fa-2x"></i></a> <a href="#" title="Project Link" target="_blank" class="linKed"><i class="fa fa-link fa-2x"></i></i></a> </span> </span> <img src="http://placehold.it/387x290&text=project8" alt="" > </div>
-        </li>
-      </ul>
-    </div>
-  </section>
+  <!--portfolio start-->
+  {% partial "member_projects" %}
   <!--portfolio end--> 
   
    <!--work experience start-->
-  <section class="experience" id="experience">
-    <div class="container">
-      <div class="heading">
-        <h2>Working <span>Here</span></h2>
-        <h3>Some of our community members.</h3>
-      </div>
-      <div class="row media">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                  <div class="experdate"><img src="{{ 'assets/images/people/members/pierre_boutros_pic.jpg'|theme }}"></div>
-                </div>
-              <div class="experdesc col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                  <h4>Pierre Boutros</h4>
-                    <h5>CEO, Millennius</h5>
-                    <p>&ldquo;We have been accepting Bitcoing at Millenius since 2013.&rdquo;</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                  <div class="experdate">Pic</div>
-                </div>
-              <div class="experdesc col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                  <h4>David Fitzgard</h4>
-                    <h5>Systems Designer</h5>
-                    <p>Cras dictum tellus dui, vitae sollicitudin ipsum tincidunt ipsum.</p>
-                </div>
-            </div>
-        </div>
-      </div>
-      <div class="row media">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                  <div class="experdate">Pic</div>
-                </div>
-              <div class="experdesc col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                  <h4>Max Mendelle</h4>
-                    <h5>Bictcoin Kanagaroo</h5>
-                    <p>Cras dictum tellus dui, vitae sollicitudin ipsum.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                  <div class="experdate">Pic</div>
-                </div>
-              <div class="experdesc col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                  <h4>Jenny McFinney</h4>
-                    <h5>CEO, BitCakesr</h5>
-                    <p>Cras dictum vitae tellus dui, vitae.</p>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  {% partial "our_members" %}
   <!--work experience end--> 
   
   <!--contact start-->
@@ -364,8 +150,8 @@ hello@coworking.biz</p>
       <!--contact form end--> 
     </div>
   </section>  
-  <!--contact end--> 
-  
+  <!--contact end-->
+
   <!--footer start-->
   <section class="footer" id="footer">
     <div class="container bottom_container">
@@ -377,8 +163,8 @@ hello@coworking.biz</p>
         <li><a href="https://github.com/mbtcentre" target="_blank"><i class="fa fa-github-alt fa-3x"></i></a></li>
         
       </ul>
-      <p>&copy; 2014 Bitcoin Co-Working Melbourne. All Rights Reserved.<br>
-        Site by <a href="http://www.webdeli.com.au">Web Deli&#8482;</a></p>
+      <p>© 2014 Bitcoin Co-Working Melbourne. All Rights Reserved.<br>
+        Site by <a href="http://www.webdeli.com.au">Web Deli™</a></p>
     </div>
     <p class="text-center"><a href="#wrapper" class="gototop"><i class="fa fa-chevron-up fa-2x"></i></a></p>
   </section>
@@ -434,7 +220,7 @@ $(document).ready( function() {
 
 <!--contact form js--> 
 <script type="text/javascript" src="{{ 'assets/js/jquery.contact.js'|theme }}"></script> 
-<script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key=ABQIAAAAjU0EJWnWPMv7oQ-jjS7dYxSPW5CJgpdgO_s4yyMovOaVh_KvvhSfpvagV18eOyDWu7VytS6Bi1CWxw" type="text/javascript"></script>
+<script src="http://maps.google.com/maps?file=api&v=2.x&key=ABQIAAAAjU0EJWnWPMv7oQ-jjS7dYxSPW5CJgpdgO_s4yyMovOaVh_KvvhSfpvagV18eOyDWu7VytS6Bi1CWxw" type="text/javascript"></script>
 <script type="text/javascript">
     //<![CDATA[
     var map;
