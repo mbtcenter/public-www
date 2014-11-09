@@ -1,0 +1,42 @@
+description = "Contact form"
+==
+<section class="contactDetails" id="contactDetails">
+    <div class="container"> 
+      <div class="row media">
+         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <h3>Contact Address</h3>
+          <p>Bitcoin Co-Working Melbourne</p>
+          <p>Upper Floor, 89-91 City Road</p>
+          <p>Southbank, Vic, Australia</p>
+
+      <h3>Contact Details</h3>
+            <p>1300 88 38 48
+hello@coworking.biz</p>
+         </div>
+        
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 conForm">
+        <form role="form"
+          data-request="{{__SELF__}}::onOctoMailSent"
+          data-request-update="'{{__SELF__}}::confirm': '.simple-msg'"
+          data-request-success="$('.form-groups').slideUp(1000)"
+          name="cform" id="cform">
+          <div class="form-groups">
+          <div class="form-group">
+            <input type="text" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" value="" name="name" id="name"  placeholder="Your name" >
+          </div>
+          <div class="form-group">
+            <input type="email" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 noMarr" value="" name="email" id="email" placeholder="Your email" >
+          </div>
+          <div class="form-group">
+            <textarea class="col-xs-12 col-sm-12 col-md-12 col-lg-12" name="comments" id="comments" placeholder="Your message" cols="" rows=""></textarea>
+          </div>
+          <input type="submit" id="submit" name="send" class="submitBnt" value="Send message">
+          <div id="simple-msg" class="simple-msg">
+            <!--This will be the container for confirmation when sent-->
+          </div>
+          </div>
+        </form>
+      </div>
+      </div>
+         </div>
+  </section>  
