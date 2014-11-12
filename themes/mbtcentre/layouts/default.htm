@@ -1,4 +1,12 @@
 description = "Default layout"
+
+[contactForm]
+==
+<?php
+function onEnd() {
+    $this->page->title = "@ Melbourne Bitcoin Technology Centre MBTC";
+}
+?>
 ==
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
@@ -11,7 +19,7 @@ description = "Default layout"
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <!-- Metas Page details-->
 <title>Bitcoin Co-Working Melbourne - {{ this.page.title }}</title>
-<meta name="description" content="Onepage Multipurpose Bootstrap HTML Template">
+<meta name="description" content="Bitcoin Co-Working Space, Melbourne AU">
 <meta name="author" content="Web Deli™">
 <!-- Mobile Specific Metas-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,9 +35,6 @@ description = "Default layout"
 <!--font-family: 'Open Sans', sans-serif;-->
 <!-- font icon css style-->
 <link rel="stylesheet" href="{{ 'assets/css/font-awesome.css'|theme }}">
-<!--Framework start -->
-{% framework %} 
-<!--Framework start -->
 </head>
 <body onLoad="load()" onUnload="GUnload()">
 <!-- Preloader -->
@@ -107,7 +112,51 @@ description = "Default layout"
   <!--contact end-->
 
   <!--contact form start-->
-  {% partial "contact_form" %}
+  <section class="contactDetails" id="contactDetails">
+    <div class="container"> 
+      <div class="row media">
+         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <h3>Contact Address</h3>
+          <p>Bitcoin Co-Working Melbourne</p>
+          <p>Upper Floor, 89-91 City Road</p>
+          <p>Southbank, Vic, Australia</p>
+
+      <h3>Contact Details</h3>
+            <p>1300 88 38 48
+hello@coworking.biz</p>
+         </div>
+        
+        
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 conForm">
+        
+         {% component 'contactForm' %}
+         
+        {#<form role="form"#}
+        {#  data-request="{{__SELF__}}::onOctoMailSent"#}
+        {#  data-request-update="'{{__SELF__}}::confirm': '.simple-msg'"#}
+        {#  data-request-success="$('.form-groups').slideUp(1000)"#}
+        {#  name="cform" id="cform">#}
+        {#  <div class="form-groups">#}
+        {#  <div class="form-group">#}
+        {#    <input type="text" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" value="" name="name" id="name"  placeholder="Your name" >#}
+        {#  </div>#}
+        {#  <div class="form-group">#}
+        {#    <input type="email" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 noMarr" value="" name="email" id="email" placeholder="Your email" >#}
+        {#  </div>#}
+        {#  <div class="form-group">#}
+        {#    <textarea class="col-xs-12 col-sm-12 col-md-12 col-lg-12" name="comments" id="comments" placeholder="Your message" cols="" rows=""></textarea>#}
+        {#  </div>#}
+        {#  <input type="submit" id="submit" name="send" class="submitBnt" value="Send message">#}
+        {#  <div id="simple-msg" class="simple-msg">#}
+        {#    <!--This will be the container for confirmation when sent-->#}
+        {#  </div>#}
+        {#  </div>#}
+        {#</form>#}
+        
+      </div>
+      </div>
+         </div>
+  </section>
   <!--contact form end--> 
 
   <!--footer start-->
@@ -202,7 +251,9 @@ $(document).ready( function() {
 
     //]]>
 </script>
-
+<!--Framework start -->
+{% framework %} 
+<!--Framework start -->
 <!--about jquery--> 
 <script src="{{ 'assets/js/jquery.classyloader.min.js'|theme }}"></script>
 <script defer src="{{ 'assets/js/jquery.flexslider.js'|theme }}"></script> 

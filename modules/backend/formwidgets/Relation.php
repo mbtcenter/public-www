@@ -108,9 +108,10 @@ class Relation extends FormWidgetBase
             $relatedObj = $model->makeRelation($attribute);
             $query = $model->{$attribute}()->newQuery();
 
-            if (in_array($this->relationType, ['belongsToMany', 'morphToMany', 'morphedByMany'])) {
+            if (in_array($this->relationType, ['belongsToMany', 'morphToMany', 'morphedByMany', 'hasMany'])) {
                 $field->type = 'checkboxlist';
-            } elseif ($this->relationType == 'belongsTo') {
+            }
+            elseif (in_array($this->relationType, ['belongsTo', 'hasOne'])) {
                 $field->type = 'dropdown';
                 $field->placeholder = $this->emptyOption;
             }
@@ -128,7 +129,8 @@ class Relation extends FormWidgetBase
             $treeTraits = ['October\Rain\Database\Traits\NestedTree', 'October\Rain\Database\Traits\SimpleTree'];
             if (count(array_intersect($treeTraits, class_uses($relatedObj))) > 0) {
                 $field->options = $query->listsNested($this->nameFrom, $relatedObj->getKeyName());
-            } else {
+            }
+            else {
                 $field->options = $query->lists($this->nameFrom, $relatedObj->getKeyName());
             }
 
