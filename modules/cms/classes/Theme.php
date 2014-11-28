@@ -47,10 +47,13 @@ class Theme
 
     /**
      * Loads the theme.
+     * @return self
      */
-    public function load($dirName)
+    public static function load($dirName)
     {
-        $this->dirName = $dirName;
+        $theme = new static;
+        $theme->setDirName($dirName);
+        return $theme;
     }
 
     /**
@@ -65,6 +68,15 @@ class Theme
         }
 
         return base_path().Config::get('cms.themesDir').'/'.$dirName;
+    }
+
+    /**
+     * Sets the theme directory name.
+     * @return void
+     */
+    public function setDirName($dirName)
+    {
+        $this->dirName = $dirName;
     }
 
     /**
@@ -83,8 +95,8 @@ class Theme
      */
     public static function exists($dirName)
     {
-        $theme = new static;
-        $path = $theme->getPath($dirName);
+        $theme = static::load($dirName);
+        $path = $theme->getPath();
 
         return File::isDirectory($path);
     }
@@ -121,7 +133,7 @@ class Theme
                 ->pluck('value')
             ;
 
-            if ($dbResult !== null) {
+            if ($dbResult !== null && static::exists($dbResult)) {
                 $activeTheme = $dbResult;
             }
         }
@@ -135,8 +147,8 @@ class Theme
             throw new SystemException(Lang::get('cms::lang.theme.active.not_set'));
         }
 
-        $theme = new static;
-        $theme->load($activeTheme);
+        $theme = static::load($activeTheme);
+
         if (!File::isDirectory($theme->getPath())) {
             return self::$activeThemeCache = null;
         }
@@ -184,8 +196,8 @@ class Theme
             throw new SystemException(Lang::get('cms::lang.theme.edit.not_set'));
         }
 
-        $theme = new static;
-        $theme->load($editTheme);
+        $theme = static::load($editTheme);
+
         if (!File::isDirectory($theme->getPath())) {
             return self::$editThemeCache = null;
         }
@@ -210,8 +222,8 @@ class Theme
                 continue;
             }
 
-            $theme = new static;
-            $theme->load($fileinfo->getFilename());
+            $theme = static::load($fileinfo->getFilename());
+
             $result[] = $theme;
         }
 
