@@ -251,11 +251,6 @@ $(document).ready( function() {
         document.getElementById("map").checked = true;
         toggleZoom(false);
       }
-    var beachMarker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      icon: image
-      });
     }
 
     function toggleZoom(isChecked) {
@@ -267,9 +262,7 @@ $(document).ready( function() {
     }
 
     //]]>
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
+    
 </script>
 <!--Framework start -->
 {% framework %} 
