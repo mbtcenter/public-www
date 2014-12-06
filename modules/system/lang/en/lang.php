@@ -97,6 +97,7 @@ return [
         'search' => 'Search'
     ],
     'mail' => [
+        'log_file' => 'Log file',
         'menu_label' => 'Mail configuration',
         'menu_description' => 'Manage email configuration.',
         'general' => 'General',

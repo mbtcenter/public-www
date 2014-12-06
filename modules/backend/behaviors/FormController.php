@@ -7,6 +7,7 @@ use Event;
 use Input;
 use Redirect;
 use Backend;
+use Backend\Classes\FormField;
 use Backend\Classes\ControllerBehavior;
 use October\Rain\Support\Util;
 use October\Rain\Router\Helper as RouterHelper;
@@ -222,7 +223,7 @@ class FormController extends ControllerBehavior
         $this->controller->formBeforeSave($model);
         $this->controller->formBeforeUpdate($model);
 
-        $modelsToSave =$this->prepareModelsToSave($model, $this->formWidget->getSaveData());
+        $modelsToSave = $this->prepareModelsToSave($model, $this->formWidget->getSaveData());
         foreach ($modelsToSave as $modelToSave) {
             $modelToSave->save(null, $this->formWidget->getSessionKey());
         }
@@ -687,7 +688,7 @@ class FormController extends ControllerBehavior
             ) {
                 $this->setModelAttributes($model->{$attribute}, $value);
             }
-            else {
+            elseif ($value !== FormField::NO_SAVE_DATA) {
                 $model->{$attribute} = $value;
             }
         }
