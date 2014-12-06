@@ -249,6 +249,7 @@ $(document).ready( function() {
         map = new GMap2(document.getElementById("map"));
         map.setCenter(new GLatLng(-37.817682, 144.957595), 15);
         document.getElementById("map").checked = true;
+        draggable(false);
         toggleZoom(false);
       }
     }
